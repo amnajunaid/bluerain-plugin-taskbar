@@ -11,8 +11,7 @@ var _reactxp2 = _interopRequireDefault(_reactxp);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var SidebarStyles = _reactxp2.default.Styles.createViewStyle({
-	width: '14%',
-	justifyContent: 'space-between'
+	width: '14%'
 });
 
 exports.default = function (BR, Content) {

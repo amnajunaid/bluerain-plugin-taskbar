@@ -20,6 +20,10 @@ var _ListItem = require('material-ui/List/ListItem');
 
 var _ListItem2 = _interopRequireDefault(_ListItem);
 
+var _Switch = require('../icons/Switch.component');
+
+var _Switch2 = _interopRequireDefault(_Switch);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -30,21 +34,66 @@ var TaskbarComponent = function TaskbarComponent(props) {
       rest = _objectWithoutProperties(props, ['items', 'hideLabels']);
 
   return _react2.default.createElement(
-    _List2.default,
-    rest,
-    items.map(function (item, index) {
-      return hideLabels ? _react2.default.createElement(_ListItem2.default, {
-        key: index.toString() + ' a',
+    'div',
+    { style: { justifyContent: 'space-between', display: 'flex', flexDirection: 'column', height: '100%' } },
+    _react2.default.createElement(
+      _List2.default,
+      rest,
+      items.map(function (item, index) {
+        return hideLabels ? _react2.default.createElement(_ListItem2.default, {
+          key: index.toString() + ' a',
+          primaryText: '',
+          leftIcon: item.icon,
+          onClick: item.onClick
+        }) : _react2.default.createElement(_ListItem2.default, {
+          key: index.toString() + ' a',
+          primaryText: item.label,
+          leftIcon: item.icon,
+          onClick: item.onClick
+        });
+      })
+    ),
+    hideLabels ? _react2.default.createElement(
+      _List2.default,
+      rest,
+      _react2.default.createElement(_ListItem2.default, {
+        key: '1a',
         primaryText: '',
-        leftIcon: item.icon,
-        onClick: item.onClick
-      }) : _react2.default.createElement(_ListItem2.default, {
-        key: index.toString() + ' a',
-        primaryText: item.label,
-        leftIcon: item.icon,
-        onClick: item.onClick
-      });
-    })
+        leftIcon: _react2.default.createElement(_Switch2.default, null),
+        onClick: function onClick() {
+          console.log('switch clicked 1');
+        }
+      }),
+      '  ',
+      _react2.default.createElement(_ListItem2.default, {
+        key: '2a',
+        primaryText: '',
+        leftIcon: _react2.default.createElement(_Switch2.default, null),
+        onClick: function onClick() {
+          console.log('switch clicked 1');
+        }
+      })
+    ) : _react2.default.createElement(
+      _List2.default,
+      rest,
+      _react2.default.createElement(_ListItem2.default, {
+        key: '1b',
+        primaryText: 'Profile',
+        leftIcon: _react2.default.createElement(_Switch2.default, null),
+        onClick: function onClick() {
+          console.log('switch clicked 1');
+        }
+      }),
+      '  ',
+      _react2.default.createElement(_ListItem2.default, {
+        key: '2b',
+        primaryText: 'Logout',
+        leftIcon: _react2.default.createElement(_Switch2.default, null),
+        onClick: function onClick() {
+          console.log('switch clicked 1');
+        }
+      })
+    )
   );
 };
 

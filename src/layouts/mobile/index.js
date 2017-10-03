@@ -1,7 +1,7 @@
 import RX from 'reactxp';
 
 const SidebarStyles = RX.Styles.createViewStyle({
-	width: '6%',
+	width: '60px',
 	justifyContent: 'center',
 	alignItems: 'flex-start',
 	backgroundColor: 'lightgrey'
