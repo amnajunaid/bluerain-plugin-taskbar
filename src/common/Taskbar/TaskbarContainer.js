@@ -11,7 +11,7 @@ import TaskbarComponent from './TaskbarComponent';
 import Bulb from '../icons/Bulb.component';
 import Launcher from '../icons/Launcher.component';
 import Mevris from '../icons/Mevris.component';
-import Switch from '../icons/Switch.component';
+
 
 const messages = defineMessages({
 	mevris: {

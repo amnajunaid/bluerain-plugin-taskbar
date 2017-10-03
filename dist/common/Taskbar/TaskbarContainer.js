@@ -34,10 +34,6 @@ var _Mevris = require('../icons/Mevris.component');
 
 var _Mevris2 = _interopRequireDefault(_Mevris);
 
-var _Switch = require('../icons/Switch.component');
-
-var _Switch2 = _interopRequireDefault(_Switch);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }

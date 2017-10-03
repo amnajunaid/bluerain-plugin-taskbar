@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import List from 'material-ui/List';
 import ListItem from 'material-ui/List/ListItem';
 import Switch from '../icons/Switch.component';
+import Status from '../icons/Status.component';
 
 const TaskbarComponent = (props) => {
 	const {
@@ -30,7 +31,10 @@ const TaskbarComponent = (props) => {
       <ListItem
         key="1a"
         primaryText=""
-        leftIcon={<Switch />}
+        leftIcon={<div style={{ display: 'flex' }}>
+          <Switch style={{ width: '30px', height: '30px' }} />
+          <Status style={{ width: '23px', height: '23px' }} color="green" />
+        </div>}
         onClick={() =>  { console.log('switch clicked 1'); }}
       />  <ListItem
         key="2a"
@@ -42,7 +46,10 @@ const TaskbarComponent = (props) => {
       <ListItem
         key="1b"
         primaryText="Profile"
-        leftIcon={<Switch />}
+        leftIcon={<div style={{ display: 'flex' }}>
+          <Switch style={{ width: '30px', height: '30px' }} />
+          <Status style={{ width: '23px', height: '23px' }} color="green" />
+        </div>}
         onClick={() =>  { console.log('switch clicked 1'); }}
       />  <ListItem
         key="2b"

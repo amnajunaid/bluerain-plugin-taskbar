@@ -24,6 +24,10 @@ var _Switch = require('../icons/Switch.component');
 
 var _Switch2 = _interopRequireDefault(_Switch);
 
+var _Status = require('../icons/Status.component');
+
+var _Status2 = _interopRequireDefault(_Status);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -59,7 +63,12 @@ var TaskbarComponent = function TaskbarComponent(props) {
       _react2.default.createElement(_ListItem2.default, {
         key: '1a',
         primaryText: '',
-        leftIcon: _react2.default.createElement(_Switch2.default, null),
+        leftIcon: _react2.default.createElement(
+          'div',
+          { style: { display: 'flex' } },
+          _react2.default.createElement(_Switch2.default, { style: { width: '30px', height: '30px' } }),
+          _react2.default.createElement(_Status2.default, { style: { width: '23px', height: '23px' }, color: 'green' })
+        ),
         onClick: function onClick() {
           console.log('switch clicked 1');
         }
@@ -79,7 +88,12 @@ var TaskbarComponent = function TaskbarComponent(props) {
       _react2.default.createElement(_ListItem2.default, {
         key: '1b',
         primaryText: 'Profile',
-        leftIcon: _react2.default.createElement(_Switch2.default, null),
+        leftIcon: _react2.default.createElement(
+          'div',
+          { style: { display: 'flex' } },
+          _react2.default.createElement(_Switch2.default, { style: { width: '30px', height: '30px' } }),
+          _react2.default.createElement(_Status2.default, { style: { width: '23px', height: '23px' }, color: 'green' })
+        ),
         onClick: function onClick() {
           console.log('switch clicked 1');
         }
